@@ -1,7 +1,7 @@
-# Cigo_cypress
-Cigo_Cypress
+# clube_cypress
+Clube_cypress
 
-> Projeto de automação de testes E2E no sistema Cigo utilizando a ferramenta Cypress.
+> Projeto de automação de testes E2E no sistema Clube utilizando a ferramenta Cypress.
 
 * **Tecnologias**
     * NodeJS
