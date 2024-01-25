@@ -1,0 +1,7 @@
+#ignore arquivos de log
+*.png
+*.html
+*.xml
+*.pdf
+*.xlsx
+*.mp4
