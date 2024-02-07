@@ -5,3 +5,6 @@
 *.pdf
 *.xlsx
 *.mp4
+
+# dependencies
+node_modules
