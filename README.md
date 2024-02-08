@@ -19,7 +19,7 @@ Clube_cypress
 
  3. Instalar as dependências
     ```
-    npm install cypress --save-dev
+    npm install
     ```  
  4. Instalar a biblioteca Faker
     ```
