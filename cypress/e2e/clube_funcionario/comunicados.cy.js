@@ -5,7 +5,7 @@ before(()=>{
 });
 after(()=>{
     cy.LogoutSistemaFuncionario()
-})
+});
 describe('Regressivo - Comunicados', () => {
 
     it('Positivo',() => {
@@ -18,6 +18,6 @@ describe('Regressivo - Comunicados', () => {
             cy.get('.comunicado-completo > :nth-child(5)').should('be.visible')
             cy.get('.editar').click()
         }
-    })
+    });
     
-})
+});

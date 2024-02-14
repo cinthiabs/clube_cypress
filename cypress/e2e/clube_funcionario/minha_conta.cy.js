@@ -3,15 +3,15 @@ import faker from 'faker';
 
 beforeEach(()=>{
     cy.AcessarSistemaFuncionario()
+    cy.get('#minha-conta').click()
+        cy.get('h4').should('be.visible','Minha Conta')
 });
 afterEach(()=>{
    cy.LogoutSistemaFuncionario()
-})
+});
 
 describe('Regressivo - Minha conta', () => {
     it('Positivo - Alteração de dados',() => {
-        cy.get('#minha-conta').click()
-        cy.get('h4').should('be.visible','Minha Conta')
         cy.get('[name="nome"]').clear().type(faker.name.findName())
         cy.get('.celular').clear().type(faker.phone.phoneNumberFormat())
         
@@ -26,9 +26,7 @@ describe('Regressivo - Minha conta', () => {
         cy.get('.btn').click()
 
     });
-    it.only('Negativo - Alteração de dados',() => {
-        cy.get('#minha-conta').click()
-        cy.get('h4').should('be.visible','Minha Conta')
+    it('Negativo - Alteração de dados',() => {
         cy.get('[name="nome"]').clear().type(faker.name.findName())
         cy.get('.celular').clear().type(faker.lorem.paragraph())
         cy.get('[type="email"]').clear().type(faker.lorem.paragraph()) 
@@ -49,9 +47,6 @@ describe('Regressivo - Minha conta', () => {
         const fileInputSelector = ':nth-child(2) > .form-control';
         const fileName = 'Teste.png';
         const filePath = `./cypress/fixtures/${fileName}`;
-
-        cy.get('#minha-conta').click()
-        cy.get('h4').should('be.visible','Minha Conta')
 
         // Faz o upload do arquivo
         cy.uploadFile(fileInputSelector, fileName, filePath);
