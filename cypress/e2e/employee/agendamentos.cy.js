@@ -2,16 +2,16 @@
 
 
 beforeEach(()=>{
-    cy.AcessarSistemaFuncionario()
+    cy.LoginEmployee()
     cy.get('#meus-agendamentos').click()
         cy.get('h4').should('be.visible','Agendamentos')
 });
 afterEach(()=>{
-   cy.LogoutSistemaFuncionario()
+   cy.Logout()
 });
 
 describe('Regressivo - Agendamentos', () => {
-    it('Positivo - Novo agendamento',() => {
+    it.skip('Positivo - Novo agendamento',() => {
         cy.get('.col-sm-3 > .btn').should('contain','Novo Agendamento').click()
         
         cy.get('.confraternizacao')

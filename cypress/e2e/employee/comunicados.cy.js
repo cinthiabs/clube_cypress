@@ -1,14 +1,13 @@
 /// <reference types="cypress" />
 
 before(()=>{
-    cy.AcessarSistemaFuncionario()
+    cy.LoginEmployee()
 });
 after(()=>{
-    cy.LogoutSistemaFuncionario()
+    cy.Logout()
 });
-describe('Regressivo - Comunicados', () => {
-
-    it('Positivo',() => {
+describe('Communicate', () => {
+    it('validate page ',() => {
         if (cy.get(':nth-child(1) > .lermais').should('be.visible')){
             cy.get(':nth-child(1) > .lermais').click()
             cy.get('.imgcompleto').should('be.visible')

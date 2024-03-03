@@ -30,6 +30,10 @@ jobs:
         env:
           # pass the Cypress Cloud record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_USER: ${{ secrets.CYPRESS_USER }}
+          CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
+          CYPRESS_USER_ADMIN: ${{ secrets.CYPRESS_USER_ADMIN }}
+          CYPRESS_PASSWORD_ADMIN: ${{ secrets.CYPRESS_PASSWORD_ADMIN }}
           
       - name: Upload Screenshots on Failure
         uses: actions/upload-artifact@v4
