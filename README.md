@@ -7,30 +7,22 @@ Clube_cypress
     * NodeJS
     * JavaScript
     * Cypress
-    * Faker  
 
 ### Como executar o projeto
  1. Instalar o Node.js
 
  2. Clonar esse repositorio  
-    ```
-     git clone https://github.com/cinthiabs/clube_cypress.git
-    ```
 
- 3. Instalar as dependências
+ 3. Instalar as dependências do projeto
     ```
     npm install
-    ```  
- 4. Instalar a biblioteca Faker
-    ```
-    npm install faker
-    ```  
- 5. Execute comando para abrir a UI do cypress
+    ```   
+ 4. Execute comando para abrir a UI do cypress
     ```
     npx cypress open
     ```
 
- 6. Execute comando para teste no terminal
+ 5. Execute comando para teste no terminal
     ```
     npx cypress run
     ```
