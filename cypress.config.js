@@ -10,4 +10,9 @@ module.exports = defineConfig({
   },
   video: true,
   videosFolder: 'cypress/videos',
+  reporter: 'mocha-junit-reporter',
+  reporterOptions: {
+    mochaFile: 'results/test-results-[hash].xml',
+    toConsole: false
+  }
 });
