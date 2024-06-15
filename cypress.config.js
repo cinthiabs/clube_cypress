@@ -9,5 +9,5 @@ module.exports = defineConfig({
     },
   },
   video: true,
-  videosFolder: 'cypress/videos',
+  videosFolder: 'cypress/videos', 
 });
